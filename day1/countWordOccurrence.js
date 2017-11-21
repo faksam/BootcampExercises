@@ -1,8 +1,11 @@
 module.exports = {
     words: function (input) {
+
     if (typeof input === 'string') {
-        input.trim();
+        input.replace(/\W/g, '');
+        input.replace(/[^0-9a-z]/gi, '');
         input = input.trim().replace(/\s+/g, ' ');
+        input.trim();
         var wordOccur = {};
         input.split(" ").forEach(function (el, i, arr) {
             wordOccur[el] = wordOccur[el] ? ++wordOccur[el] : 1;
