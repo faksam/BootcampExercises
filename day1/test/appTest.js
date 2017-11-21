@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const app = require('../function');
+const app = require('../countWordOccurrence');
 
 describe("words(olly olly in come free)", () => {
     //Test to check correct input
